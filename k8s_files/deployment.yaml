@@ -2,22 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pandacloud-app
+  name: spotify-app
   labels:
-    app: pandacloud-app
+    app: spotify-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pandacloud-app
+      app: spotify-app
   template:
     metadata:
       labels:
-        app: pandacloud-app
+        app: spotify-app
     spec:
       containers:
-      - name: pandacloud-container
-        image: 309395755719.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
-        ports:
-        - containerPort: 3000
-...
+        - name: spotify-container
+          image: 970547377227.dkr.ecr.us-east-1.amazonaws.com/spotify-clone:latest
+          ports:
+            - containerPort: 8080
