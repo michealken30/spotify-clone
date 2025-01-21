@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+terraform_code/ec2_server/.gitattributes
+terraform_code/ec2_server/.terraform/
